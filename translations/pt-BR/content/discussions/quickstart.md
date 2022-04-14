@@ -1,58 +1,77 @@
 ---
 title: Início Rápido para Discussões do GitHub
-intro: 'Habilite {% data variables.product.prodname_discussions %} em um repositório existente e inicie conversas com sua comunidade.'
+intro: 'Enable {% data variables.product.prodname_discussions %} on an existing repository or organization and start conversations with your community.'
 allowTitleToDifferFromFilename: true
 versions:
-  free-pro-team: '*'
+  fpt: '*'
+  ghec: '*'
+shortTitle: QuickStart
 ---
 
-{% data reusables.discussions.beta %}
 
-### Introdução
+## Introdução
 
-{% data variables.product.prodname_discussions %} é um fórum de comunicação colaborativo para a comunidade sobre um projeto de código aberto. As discussões são para conversas que precisam ser transparentes e acessíveis, mas não precisam ser rastreadas em um quadro de projeto e não estão relacionadas ao código, ao contrário dos problemas. As discussões permitem uma conversa fluida e aberta em um fórum público.
+{% data variables.product.prodname_discussions %} é um fórum de comunicação colaborativo para a comunidade sobre um projeto de código aberto. As discussões são para conversas que precisam ser transparentes e acessíveis, mas não precisam ser rastreadas em um quadro de projeto e não estão relacionadas ao código, diferente de {% data variables.product.prodname_github_issues %}. As discussões permitem uma conversa fluida e aberta em um fórum público.
 
 As discussões dão um espaço para conversas mais colaborativas, conectando-se e dando uma área mais centralizada para se conectar e encontrar informações.
 
-### Habilitar {% data variables.product.prodname_discussions %} no seu repositório
+## Habilitar {% data variables.product.prodname_discussions %} no seu repositório
 
 Os proprietários de repositórios e pessoas com acesso de escrita podem habilitar {% data variables.product.prodname_discussions %} para uma comunidade nos seus repositórios públicos e privados.
 
-Ao habilitar primeiro um {% data variables.product.prodname_discussions %}, você será convidado a configurar uma mensagem de boas-vindas.
+Ao habilitar {% data variables.product.prodname_discussions %} pela primeira vez, você será convidado a configurar um post de boas-vindas.
 
 {% data reusables.repositories.navigate-to-repo %}
 1. No nome do seu repositório, clique em {% octicon "gear" aria-label="The gear icon" %} **Configurações**. ![Botão de configurações públicas](/assets/images/help/discussions/public-repo-settings.png)
-1. Em "Recursos", clique em **Configurar discussões**. ![Configure um botão de discussão em "Recursos" para habilitar ou desabilitar discussões para um repositório](/assets/images/help/discussions/setup-discussions-button.png)
+1. Em "Recursos", clique em **Configurar discussões**. ![Configure um botão de discussão em "Recursos" para habilitar ou desabilitar as Discussões do GitHub para um repositório](/assets/images/help/discussions/setup-discussions-button.png)
 1. Em "Iniciar uma nova discussão", edite o modelo para que fique alinhado aos recursos e tom que você deseja definir para sua comunidade.
 1. Clique em **Iniciar discussão**. ![Botão "Iniciar discussão"](/assets/images/help/discussions/new-discussion-start-discussion-button.png)
 
-### Dar as boas-vindas às contribuições para as suas discussões
+## Enabling {% data variables.product.prodname_discussions %} on your organization
 
-Você pode dar as boas-vindas à sua comunidade e apresentar uma nova forma de comunicar-se em um repositório, criando um posts de boas-vindas e colocando o post na sua página de {% data variables.product.prodname_discussions %}. Fixar e bloquear discussões ajuda as pessoas a saber que uma publicação é feita como um anúncio. Você pode usar os anúncios como uma forma de vincular pessoas a mais recursos e oferecer orientação para abrir discussões na sua comunidade. Para obter mais informações sobre como fixar uma discussão, consulte "[Gerenciar discussões no seu repositório](/discussions/managing-discussions-for-your-community/managing-discussions-in-your-repository#pinning-a-discussion)".
+Organization owners can enable {% data variables.product.prodname_discussions %} for their organization.
+
+{% data reusables.discussions.about-organization-discussions %}
+
+{% data reusables.discussions.enabling-or-disabling-github-discussions-for-your-organization %}
+
+## Dar as boas-vindas às contribuições para as suas discussões
+
+You can welcome your community and introduce a new way to communicate in a repository or organization by creating a welcome post and pinning the post to your {% data variables.product.prodname_discussions %} page. Fixar e bloquear discussões ajuda as pessoas a saber que uma publicação é feita como um anúncio. Você pode usar os anúncios como uma forma de vincular pessoas a mais recursos e oferecer orientação para abrir discussões na sua comunidade. For more information about pinning a discussion, see "[Managing discussions](/discussions/managing-discussions-for-your-community/managing-discussions#pinning-a-discussion)."
 
 
-### Configurar diretrizes da comunidade para colaboradores
+## Configurar diretrizes da comunidade para colaboradores
 
-Você pode definir diretrizes de contribuição para incentivar os colaboradores a terem conversas significativas e úteis que sejam relevantes para o repositório. Você também pode atualizar o README do repositório para comunicar as expectativas quando os colaboradores devem abrir um problema ou discussão.
+For repository discussions, you can set contributing guidelines to encourage collaborators to have meaningful, useful conversations that are relevant to the repository. Você também pode atualizar o README do repositório para comunicar as expectativas quando os colaboradores devem abrir um problema ou discussão. Para obter mais informações sobre como fornecer diretrizes para o seu projeto, consulte "[Adicionar um código de conduta ao seu projeto](/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)" e "[Configurar seu projeto para contribuições saudáveis](/communities/setting-up-your-project-for-healthy-contributions)".
 
-Para obter mais informações sobre como fornecer diretrizes para o seu projeto, consulte "[Adicionar um código de conduta ao seu projeto](/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)" e "[Configurar seu projeto para contribuições saudáveis](/communities/setting-up-your-project-for-healthy-contributions)".
+For organization discussions, you share information about how to engage with your organization by creating an organization profile README. Para obter mais informações, consulte "[Personalizar o perfil da sua organização](/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile)".
 
-### Criar uma nova discussão
+## Criar uma nova discussão
 
-Qualquer pessoa com acesso a um repositório pode criar uma discussão.
+Any authenticated user who can view the repository can create a discussion in that repository. Similarly, since organization discussions are based on a source repository, any authenticated user who can view the source repository can create a discussion in that organization.
 
 {% data reusables.discussions.starting-a-discussion %}
 
-### Organizar discussões em categorias relevantes
+## Creating a new poll
 
-Os proprietários dos repositórios e pessoas com acesso de gravação podem criar novas categorias para manter as discussões organizadas. Os colaboradores que participam e criam novas discussões podem agrupar discussões nas categorias existentes mais relevantes. As discussões também podem ser recategorizadas depois que forem criadas. Para obter mais informações, consulte "[Gerenciar categorias para discussões no seu repositório](/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)".
+Any authenticated user who can view a repository can create a poll. Similarly, since organization discussions are based on a source repository, any authenticated user who can view the source repository can create a poll in that organization.
 
-### Promover conversas saudáveis
+{% data reusables.discussions.starting-a-poll %}
 
-As pessoas com permissões de gravação em um repositório podem ajudar a supervisionar conversas importantes fixando discussões, excluindo discussões que não são mais úteis ou que são prejudiciais para a comunidade e transferindo discussões para repositórios mais relevantes pertencentes à organização. Para obter mais informações, consulte "[Gerenciar discussões no seu repositório](/discussions/managing-discussions-for-your-community/managing-discussions-in-your-repository)".
+## Organizando discussões
 
-Pessoas com permissões de triagem para um repositório podem ajudar a moderar as discussões de um projeto marcando comentários como respostas, bloqueando discussões que já não são úteis ou prejudicam a comunidade e convertendo os problemas em discussões quando uma ideia ainda está nos primeiros estágios de desenvolvimento. Para obter mais informações, consulte "[Moderação de discussões](/discussions/managing-discussions-for-your-community/moderating-discussions)".
+Repository owners and people with write access to the repository can create new categories to keep discussions organized. Similarly, since organization discussions are based on a source repository, repository owners and people with write access to the source repository can create new categories for organization discussions.
 
-### Próximas etapas
+Os colaboradores que participam e criam novas discussões podem agrupar discussões nas categorias existentes mais relevantes. As discussões também podem ser recategorizadas depois que forem criadas. For more information, see "[Managing categories for discussions](/discussions/managing-discussions-for-your-community/managing-categories-for-discussions)."
+
+{% data reusables.discussions.you-can-label-discussions %}
+
+## Promover conversas saudáveis
+
+People with write permissions for the repository, or for the source repository for organization discussions, can help surface important conversations by pinning discussions, deleting discussions that are no longer useful or are damaging to the community, and transferring discussions to more relevant repositories owned by the organization. For more information, see "[Managing discussions](/discussions/managing-discussions-for-your-community/managing-discussions)."
+
+People with triage permissions for the repository, or for the source repository for organization discussions, can help moderate a project's discussions by marking comments as answers, locking discussions that are no longer useful or are damaging to the community, and converting issues to discussions when an idea is still in the early stages of development. Para obter mais informações, consulte "[Moderação de discussões](/discussions/managing-discussions-for-your-community/moderating-discussions)".
+
+## Próximas etapas
 
 Uma vez traçado um caminho claro para o definir o escopo do trabalho, deve-se concretizar a ideia. você pode criar um problema e começar a acompanhar seu progresso. Para obter mais informações sobre a criação de um problema a partir de uma discussão, consulte "[Moderar discussões](/discussions/managing-discussions-for-your-community/moderating-discussions)".

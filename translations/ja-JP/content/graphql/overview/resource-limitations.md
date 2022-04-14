@@ -4,11 +4,12 @@ intro: '{% data variables.product.prodname_dotcom %}のGraphQL APIは、{% data 
 redirect_from:
   - /v4/guides/resource-limitations
 versions:
-  free-pro-team: '*'
-  enterprise-server: '*'
-  github-ae: '*'
+  fpt: '*'
+  ghec: '*'
+  ghes: '*'
+  ghae: '*'
 topics:
-  - api
+  - API
 ---
 
 ## ノードの制限
@@ -19,11 +20,13 @@ topics:
 * `first`及び`last`の値は1から100の間でなければなりません。
 * 個々の呼び出しは合計500,000以上の[ノード](/graphql/guides/introduction-to-graphql#node)をリクエストできません。
 
-#### 呼び出し中のノードの計算
+### 呼び出し中のノードの計算
 
 以下の2つの例は、呼び出し中の合計ノード数を計算する方法を示しています。
 
-1. 単純なクエリ： <pre>query {
+1. 単純なクエリ：
+
+  <pre>query {
     viewer {
       repositories(first: <span class="redbox">50</span>) {
         edges {
@@ -45,13 +48,17 @@ topics:
     }
   }</pre>
 
-  計算： <pre><span class="redbox">50</span>         = 50 リポジトリ
+  計算：
+
+  <pre><span class="redbox">50</span>         = 50 リポジトリ
    +
   <span class="redbox">50</span> x <span class="greenbox">10</span>  = 500 リポジトリのIssue
 
               = 550 総ノード</pre>
 
-2. 複雑なクエリ： <pre>query {
+2. 複雑なクエリ：
+
+  <pre>query {
     viewer {
       repositories(first: <span class="redbox">50</span>) {
         edges {
@@ -105,7 +112,9 @@ topics:
     }
   }</code></pre>
 
-  計算： <pre><span class="redbox">50</span>              = 50 リポジトリ
+  計算：
+
+  <pre><span class="redbox">50</span>              = 50 リポジトリ
    +
   <span class="redbox">50</span> x <span class="greenbox">20</span>       = 1,000 プルリクエスト
    +
@@ -140,7 +149,7 @@ GraphQL API v4のレート制限は、**1時間あたり5,000ポイント**で�
 
 {% endnote %}
 
-#### 呼び出しのレート制限のステータスを返す
+### 呼び出しのレート制限のステータスを返す
 
 REST API v3 では、返された HTTP ヘッダを[調べる](/rest/overview/resources-in-the-rest-api#rate-limiting)ことにより、レート制限のステータスを確認できます。
 
@@ -168,7 +177,7 @@ query {
 
 * `resetAt`は、現在のレート制限ウィンドウがリセットされる時間を[UTCエポック秒](http://en.wikipedia.org/wiki/Unix_time)で返します。
 
-#### 呼び出しの実行前にレート制限スコアを計算する
+### 呼び出しの実行前にレート制限スコアを計算する
 
 `rateLimit`オブジェクトに対してクエリを実行すれば、呼び出しのスコアが返されますが、その呼び出しを実行すると制限に対してカウントされます。 このジレンマを避けるために、呼び出しのスコアを実行前に計算することができます。 以下の計算は、`rateLimit { cost }`が返すのとおおよそ同じコストを求めます。
 
